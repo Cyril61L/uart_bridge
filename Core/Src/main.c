@@ -90,7 +90,6 @@ void USART1_IRQHandler(void)
        if(uart1.count < BUFFER_SIZE - 1) {
            uart1.rxBuffer[uart1.count] = LL_USART_ReceiveData8(USART1);
            uart1.count++;
-
        }
        LL_USART_EnableIT_IDLE(USART1);
    }
